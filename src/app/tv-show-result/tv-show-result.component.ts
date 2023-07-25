@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ITVShow } from '../itvshow';
 
 @Component({
   selector: 'app-tv-show-result',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./tv-show-result.component.css']
 })
 export class TvShowResultComponent {
-
+  current: ITVShow
+  constructor () {
+    this.current = {
+    name: "The Queen's Gambit",
+    genre: 'Drama',
+    image: ''
+    }
+  }
 }
