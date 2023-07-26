@@ -1,5 +1,5 @@
 export interface ITVShow {
     name: string
-    genre: string
+    genres: Array<string>
     image: string
 }

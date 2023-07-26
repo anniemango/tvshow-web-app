@@ -1,11 +1,13 @@
 <div>
-    <div>
-        <span>{{current.name}}</span>
-    </div>
-    <div>
-        <img [src]="current.image" />
-    </div>
-    <div>
-        <span>{{current.genre}}</span>
-    </div>
+    <ng-template ngFor let-item [ngForOf]="current" let-i="index">
+        <div>
+            <span>{{item.name}}</span>
+        </div>
+        <div>
+            <img [src]="item.image" />
+        </div>
+        <div>
+            <span>{{item.genres}}</span>
+        </div>
+    </ng-template>
 </div>

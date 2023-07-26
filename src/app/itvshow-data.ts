@@ -1,7 +1,9 @@
 export interface ITVShowData {
-    name: string
-    genre: string
+  show: {
+    name: string;
+    genres: Array<string>;
     image: {
-        original: string
-    }
+      original: string;
+    };
+  };
 }
