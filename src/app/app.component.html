@@ -1,6 +1,11 @@
 <div style = 'text-align: center;'>
   <mat-toolbar>TV Show</mat-toolbar>
-  <div>Find the show you'll binge next!</div>
+  <div>Find the show you'll binge next!
+    <h3>TV Show Search</h3>
+    <mat-card style="max-width: 200px;margin: left 250px;;margin-top: 50px;"> 
+       <app-tv-show-search [current] = "tvShow"></app-tv-show-search>
+      </mat-card>
+  </div>
   <h2>TV show result</h2>
   <mat-card style="max-width: 400px;">
     <app-tv-show-result></app-tv-show-result>
