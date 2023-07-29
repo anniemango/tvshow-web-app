@@ -8,7 +8,7 @@ import { ITVShow } from '../itvshow';
 })
 export class TvShowResultComponent {
   @Input() current: Array<ITVShow>;
-  constructor(private tvshowService: TvshowService) {
+  constructor() {
     this.current = [
       {
         name: '',
