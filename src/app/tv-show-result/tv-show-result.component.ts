@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { ITVShow } from '../itvshow';
-import { TvshowService } from '../tvshow.service';
 
 @Component({
   selector: 'app-tv-show-result',

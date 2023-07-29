@@ -9,9 +9,7 @@ import { ITVShow } from './itvshow';
 })
 export class AppComponent {
   title = 'tvshow-web-app';
-  tvShow: ITVShow[] =
-  [
-  {
+  tvShow: ITVShow[] =  [{
     name: '',
     genres: Array<string>(),
     image: ''
