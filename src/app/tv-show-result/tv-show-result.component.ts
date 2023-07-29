@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ITVShow } from '../itvshow';
 import { TvshowService } from '../tvshow.service';
 
@@ -8,11 +8,15 @@ import { TvshowService } from '../tvshow.service';
   styleUrls: ['./tv-show-result.component.css'],
 })
 export class TvShowResultComponent {
-  current: Array<ITVShow>;
+  @Input() current: Array<ITVShow>;
   constructor(private tvshowService: TvshowService) {
-    this.current = [];
-    this.tvshowService
-      .getShows('girls')
-      .subscribe(data => this.current = data);
+    this.current = [
+      {
+        name: '',
+        genres: Array<string>(),
+        image: ''
+      }
+    ];
+    
   }
 }

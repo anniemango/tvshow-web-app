@@ -9,12 +9,13 @@ import { ITVShow } from './itvshow';
 })
 export class AppComponent {
   title = 'tvshow-web-app';
-  tvShow: ITVShow =
+  tvShow: ITVShow[] =
+  [
   {
     name: '',
     genres: Array<string>(),
     image: ''
-  }
+  }]
   constructor(private tvshowService: TvshowService)
   {}
     doSearch(searchValue:string)

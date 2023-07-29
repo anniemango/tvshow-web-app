@@ -16,13 +16,15 @@ export class TvshowService {
   }
   private transformToITVShow(data: Array<ITVShowData>): Array<ITVShow> {
     const result: Array<ITVShow> = [];
-    data.map((showItem) =>
+    console.log(data);
+    data.map((showItem) => {
       result.push({
         name: showItem.show.name,
         genres: showItem.show.genres,
-        image: showItem.show.image.original,
+        image:showItem.show.image? showItem.show.image.original: 'https://static.tvmaze.com/images/no-img/no-img-portrait-text.png'
       })
-    );
+    });
+    console.log(result);
     return result;
   }
 }
