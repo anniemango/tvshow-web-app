@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class TvshowService {
   constructor(private httpClient: HttpClient) {}
-  getShows(input: string) {
+  getShows(input: String) {
     return this.httpClient
       .get<Array<ITVShowData>>(`https://api.tvmaze.com/search/shows?q=${input}`)
       .pipe(map((data) => this.transformToITVShow(data)));
