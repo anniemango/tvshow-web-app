@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { TvShowResultComponent } from './tv-show-result/tv-show-result.component';
 import { TvShowSearchComponent} from './tv-show-search/tv-show-search.component';
 
@@ -30,7 +31,8 @@ import { TvShowSearchComponent} from './tv-show-search/tv-show-search.component'
     MatButtonModule,
     MatIconModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

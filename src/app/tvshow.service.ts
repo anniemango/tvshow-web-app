@@ -15,16 +15,15 @@ export class TvshowService {
       .pipe(map((data) => this.transformToITVShow(data)));
   }
   private transformToITVShow(data: Array<ITVShowData>): Array<ITVShow> {
-    const result: Array<ITVShow> = [];
-    console.log(data);
-    data.map((showItem) => {
-      result.push({
+    const result: Array<ITVShow> = data.map((showItem) => {
+      return {
         name: showItem.show.name,
         genres: showItem.show.genres,
-        image:showItem.show.image? showItem.show.image.original: 'https://static.tvmaze.com/images/no-img/no-img-portrait-text.png'
-      })
+        image: showItem.show.image
+          ? showItem.show.image.original
+          : 'https://static.tvmaze.com/images/no-img/no-img-portrait-text.png',
+      };
     });
-    console.log(result);
     return result;
   }
 }

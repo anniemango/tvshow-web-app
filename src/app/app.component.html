@@ -1,13 +1,9 @@
 <div style = 'text-align: center;'>
-  <mat-toolbar>TV Show</mat-toolbar>
+  <mat-toolbar color="accent">TV Show</mat-toolbar>
   <div>Find the show you'll binge next!
-    <h3>TV Show Search</h3>
-    <mat-card style="max-width: 200px;margin: left 250px;;margin-top: 50px;"> 
+    <div style="margin: 0 auto;width: 40%;height: 50%; margin-top: 20px">
        <app-tv-show-search (searchEvent)="doSearch($event)"></app-tv-show-search>
-      </mat-card>
+    </div>
   </div>
-  <h2>TV show result</h2>
-  <mat-card style="max-width: 400px;">
     <app-tv-show-result [current]="tvShow"></app-tv-show-result>
-  </mat-card>
 </div>
