@@ -8,9 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "overrides": {
-    "critters": "^0.0.20"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.1.0",
@@ -39,5 +36,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.1.3"
+  },
+  "overrides": {
+    "@angular-devkit/build-angular": {
+      "critters": "0.0.20"
+    }
   }
 }
